@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Vitor Rovetta Junqueira">
+    <meta name="description" content="...">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/fonts.css">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <title>SignUp - Fabricator</title>
+</head>
+<body>
+    <header class="header-fabricator">
+        <i class="material-icons">arrow_back_ios</i>
+        <a href="#" class="header-back-button">Back to versions</a>
+    </header>
+
+    <section class="section-form-fabricator">
+        <form action="#" class="fabricator-form">
+            <h1 class="form-title">Sign Up for Fabricator</h1>
+            <h2 class="form-subtitle">Please enter your details</h2>
+            <input class="form-text-input" type="text" name="name" autocomplete="name" placeholder="*Name..." required>
+            <input class="form-text-input" type="email" name="e-mail" autocomplete="email" placeholder="*E-mail..." required>
+            <input class="form-text-input" type="tel" name="phone" autocomplete="tel" placeholder="*Phone..." required>
+            <input class="form-text-input" type="text" name="company" autocomplete="organization" placeholder="*Company..." required>
+            <input class="form-text-input" type="text" name="login" autocomplete="off" placeholder="*Login..." required>
+            <input class="form-text-input" type="text" name="password" autocomplete="off" placeholder="*Password..." required>
+            <div class="temporary-website-input">
+                <input class="form-text-input" type="text" name="temporary-website" autocomplete="off" placeholder="*Temporary Website..." required>
+                <span class="temporary-website-span">.slabware.com</span>
+            </div>
+            <h2 class="form-subtitle" for="">Select your plan</h2>
+            <div class="select-plans">
+                <div>
+                    <input class="plan-input" id="monthly-plan" type="radio" name="plan" value="monthly" checked>
+                    <label id="monthly-plan-span" class="plan-content selected" for="monthly-plan" onclick="planSelector(this.id)">
+                        <h3 class="plan-title">Monthly</h3>
+                        <span class="plan-price">U$ 149</span>
+                        <span class="plan-per-month">Per month</span>
+                    </label>
+                </div>
+                <div>
+                    <input class="plan-input" id="semesterly-plan" type="radio" name="plan" value="semesterly">
+                    <label id="semesterly-plan-span" class="plan-content" for="semesterly-plan" onclick="planSelector(this.id)">
+                        <h3 class="plan-title">Semesterly</h3>
+                        <span class="plan-price">U$ 142</span>
+                        <span class="plan-per-month">Per month</span>
+                        <span class="plan-billed">Billed semesterly<strong> U$ 852</strong></span>
+                    </label>
+                </div>
+                <div>
+                    <input class="plan-input" id="yearly-plan" type="radio" name="plan" value="yearly">
+                    <label id="yearly-plan-span" class="plan-content" for="yearly-plan" onclick="planSelector(this.id)">
+                        <h3 class="plan-title">Yearly</h3>
+                        <span class="plan-price">U$ 135</span>
+                        <span class="plan-per-month">Per month</span>
+                        <span class="plan-billed">Billed yearly<strong> U$ 1,620</strong></span>
+                    </label>
+                </div>
+            </div>
+            <button class="form-buy-button" type="submit">buy now</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content footer-1">
+                <ul>
+                    <li><span class="footer-title">Pages</span></li>
+                    <li><a href="#" class="footer-link">Home</a></li>
+                </ul>
+                <ul>
+                    <li><span class="footer-title">Versions</span></li>
+                    <li><a href="#" class="footer-link">Fabricator</a></li>
+                </ul>
+                <ul>
+                    <li><span class="footer-title">More Info</span></li>
+                    <li><a href="#" class="footer-link">info@slabware.com</a></li>
+                </ul>
+                <ul>
+                    <li><span class="footer-title">Help</span></li>
+                    <li><a href="#" class="footer-link">How it Works</a></li>
+                </ul>
+                <ul>
+                    <li><span class="footer-title">Social Media</span></li>
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-container footer-2">
+            <div class="footer-content">
+                <div class="footer-row">
+                    <span class="footer-title">Headquarter:</span>
+                    <a href="#" class="footer-link">Brazil</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="src/js/scripts.js"></script>
+</body>
+</html>
