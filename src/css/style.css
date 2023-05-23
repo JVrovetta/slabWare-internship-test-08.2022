@@ -1,226 +1,144 @@
-*{
-    font-family: 'roboto', sans-serif;
+@font-face {
+  font-family: Roboto;
+  font-weight: 200;
+  src: url(../font/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 300;
+  src: url(../font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  src: url(../font/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 600;
+  src: url(../font/Roboto-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
 }
 
-.header-fabricator{
+body {
+  background-color: #f1f1f1;
+}
+
+nav {
+  background-color: #151515;
+  color: #ffffff;
+}
+nav .navbar-text {
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+form {
+  padding: 3rem 3rem 5rem 3rem;
+  width: 40rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.1254901961));
+}
+form h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+form .paragraph {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+form .form-control {
+  border: 0.12rem solid #a7a6a6;
+  border-radius: 0.5rem;
+}
+form .form-control::placeholder {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+form .col-form-label {
+  font-weight: 300;
+  color: #a7a6a6;
+}
+form .card {
+  opacity: 0.5;
+  border: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+form .card .card-header {
+  border: 0.15rem solid rgba(0, 0, 0, 0.0823529412);
+  border-radius: 0.6rem 0.6rem 0rem 0rem;
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+form .card .card-body {
+  border: 0.15rem solid rgba(0, 0, 0, 0.0823529412);
+  border-radius: 0rem 0rem 0.6rem 0.6rem;
+  background-color: #f1f1f1;
+}
+form .card .card-body .card-title {
+  font-weight: 600;
+}
+form .card .card-body .card-subtitle {
+  font-size: 0.9rem;
+}
+form .card .card-body .card-text {
+  font-size: 0.8rem;
+}
+form .card.selected {
+  opacity: 1;
+}
+form .card.selected .card-body {
+  background-color: #ffaf1f;
+}
+form .card:hover {
+  opacity: 1;
+}
+form .btn {
+  width: 9rem;
+  font-weight: 600;
+  border: 0.2rem solid rgba(0, 0, 0, 0.0823529412);
+  border-radius: 2rem;
+  background-color: #ffaf1f;
+  color: #3a3a3a;
+}
+form .btn:hover {
+  background-color: #ffaf1f;
+  border: 0.2rem solid rgba(0, 0, 0, 0.0823529412);
+  color: #ffffff;
+}
+
+.footerRow {
+  color: #86868b;
+  border: 0.1rem solid #86868b;
+}
+.footerRow a {
+  text-decoration: none;
+  color: #86868b;
+}
+
+@media (max-width: 40rem) {
+  form {
     width: 100%;
-    height: 70px;
-    padding: 0 0 0 5%;
-    background: var(--header-background-color);
+  }
+}
+@media (max-width: 425px) {
+  form {
+    padding: 2rem 2rem 4rem 2rem;
+  }
 }
 
-.header-fabricator .header-back-button{
-    position: absolute;
-    line-height: 70px;
-    text-transform: uppercase;
-    color: var(--header-text-color);
-}
-
-.header-fabricator .material-icons{
-    line-height: 70px;
-    color: var(--header-text-color);
-}
-
-.section-form-fabricator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 45px 10px;
-    background: var(--section-background-color);
-}
-
-.section-form-fabricator .fabricator-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 620px;
-    padding: 40px 60px;
-    border-radius: 20px;
-    background: var(--form-background-color);
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .15));
-}
-
-.section-form-fabricator .fabricator-form .form-title{
-    width: 100%;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 500;
-    margin: 0 0 25px 0;
-    color: var(--form-titles-color);
-}
-
-.section-form-fabricator .fabricator-form .form-subtitle{
-    width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0 0 15px 0;
-    color: var(--form-titles-color);
-}
-
-.section-form-fabricator .fabricator-form .form-text-input{
-    width: 100%;
-    height: 35px;
-    margin: 0 0 15px 0;
-    padding: 0 0 0 15px;
-    font-size: 14px;
-    border-radius: 10px;
-    border: 1px solid var(--form-input-border-color);
-}
-
-.section-form-fabricator .fabricator-form .form-text-input::placeholder{
-    font-weight: 200;
-    color: var(--form-text-color);
-}
-
-.section-form-fabricator .fabricator-form .temporary-website-input{
-    display: flex;
-    width: 100%;
-    column-gap: 5px;
-    margin: 0 0 15px 0;
-}
-
-.section-form-fabricator .fabricator-form .temporary-website-input .temporary-website-span{
-    line-height: 37px;
-    font-weight: 200;
-    color: var(--form-text-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 15px;
-    margin: 0 0 40px 0;
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-input{
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: top;
-    width: 156px;
-    height: 130px;
-    cursor: pointer;
-    border-radius: 15px;
-    opacity: .5;
-    background: var(--plan-background-color);
-    transition: .2s;
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content:hover{
-    opacity: 1;
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content.selected{
-    opacity: 1;
-    background: var(--plan-selected-background-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content .plan-title{
-    width: 100%;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    margin: 0 0 12px 0;
-    border-radius: 10px 10px 0 0;
-    font-weight: 300;
-    color: var(--plan-title-color);
-    background-color: var(--plan-title-background-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content .plan-price{
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--plan-text-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content .plan-per-month{
-    font-size: 14px;
-    font-weight: 300;
-    margin: 0 0 12px 0;
-    color: var(--plan-text-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content .plan-billed{
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--plan-text-color);
-}
-
-.section-form-fabricator .fabricator-form .select-plans .plan-content .plan-billed strong{
-    font-weight: 600;
-}
-
-.section-form-fabricator .fabricator-form .form-buy-button{
-    width: 140px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 20px;
-    border: 3px solid var(--button-border-color);
-    margin: 0  0 30px 0;
-    color: var(--button-text-color);
-    background: var(--button-background-color);
-    transition: .2s;
-}
-
-.section-form-fabricator .fabricator-form .form-buy-button:hover{
-    transform: scale(.9);
-}
-
-.footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid var(--footer-border-color);
-    background: var(--footer-background-color);
-}
-
-.footer-container .footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1127px;
-    width: 100%;
-    padding: 30px 20px;
-    column-gap: 150px;
-}
-
-.footer-container .footer-content .footer-title{
-    font-size: 20px;
-    color: var(--footer-text-color);
-}
-
-.footer-container .footer-content .footer-link{
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--footer-text-color);
-    transition: .2s;
-}
-
-.footer-container .footer-content .footer-link:hover{
-    color: var(--footer-link-hover-color);
-}
-
-.footer-container .footer-content ul li{
-    margin: 0 0 15px 0;
-}
-
-.footer-container .footer-content .footer-row{
-    display: flex;
-    width: 100%;
-}
-
-.footer-container .footer-content .footer-row .footer-title{
-    width: 100%
-}
+/*# sourceMappingURL=style.css.map */

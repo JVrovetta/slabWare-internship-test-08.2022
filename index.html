@@ -1,105 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="João Vitor Rovetta Junqueira">
-    <meta name="description" content="...">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/fonts.css">
-    <link rel="stylesheet" href="src/css/colors.css">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <title>SignUp - Fabricator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"
+        defer></script>
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Personal JS -->
+    <script src="./src/js/index.js" defer></script>
+    <title>Slabware - internship test</title>
 </head>
+
 <body>
-    <header class="header-fabricator">
-        <i class="material-icons">arrow_back_ios</i>
-        <a href="#" class="header-back-button">Back to versions</a>
+    <header>
+        <nav class="navbar py-2">
+            <div class="container">
+                <a class="navbar-text" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                    BACK TO VERSIONS
+                </a>
+            </div>
+        </nav>
     </header>
 
-    <section class="section-form-fabricator">
-        <form action="#" class="fabricator-form">
-            <h1 class="form-title">Sign Up for Fabricator</h1>
-            <h2 class="form-subtitle">Please enter your details</h2>
-            <input class="form-text-input" type="text" name="name" autocomplete="name" placeholder="*Name..." required>
-            <input class="form-text-input" type="email" name="e-mail" autocomplete="email" placeholder="*E-mail..." required>
-            <input class="form-text-input" type="tel" name="phone" autocomplete="tel" placeholder="*Phone..." required>
-            <input class="form-text-input" type="text" name="company" autocomplete="organization" placeholder="*Company..." required>
-            <input class="form-text-input" type="text" name="login" autocomplete="off" placeholder="*Login..." required>
-            <input class="form-text-input" type="text" name="password" autocomplete="off" placeholder="*Password..." required>
-            <div class="temporary-website-input">
-                <input class="form-text-input" type="text" name="temporary-website" autocomplete="off" placeholder="*Temporary Website..." required>
-                <span class="temporary-website-span">.slabware.com</span>
-            </div>
-            <h2 class="form-subtitle" for="">Select your plan</h2>
-            <div class="select-plans">
-                <div>
-                    <input class="plan-input" id="monthly-plan" type="radio" name="plan" value="monthly" checked>
-                    <label id="monthly-plan-span" class="plan-content selected" for="monthly-plan" onclick="planSelector(this.id)">
-                        <h3 class="plan-title">Monthly</h3>
-                        <span class="plan-price">U$ 149</span>
-                        <span class="plan-per-month">Per month</span>
-                    </label>
-                </div>
-                <div>
-                    <input class="plan-input" id="semesterly-plan" type="radio" name="plan" value="semesterly">
-                    <label id="semesterly-plan-span" class="plan-content" for="semesterly-plan" onclick="planSelector(this.id)">
-                        <h3 class="plan-title">Semesterly</h3>
-                        <span class="plan-price">U$ 142</span>
-                        <span class="plan-per-month">Per month</span>
-                        <span class="plan-billed">Billed semesterly<strong> U$ 852</strong></span>
-                    </label>
-                </div>
-                <div>
-                    <input class="plan-input" id="yearly-plan" type="radio" name="plan" value="yearly">
-                    <label id="yearly-plan-span" class="plan-content" for="yearly-plan" onclick="planSelector(this.id)">
-                        <h3 class="plan-title">Yearly</h3>
-                        <span class="plan-price">U$ 135</span>
-                        <span class="plan-per-month">Per month</span>
-                        <span class="plan-billed">Billed yearly<strong> U$ 1,620</strong></span>
-                    </label>
-                </div>
-            </div>
-            <button class="form-buy-button" type="submit">buy now</button>
-        </form>
-    </section>
+    <form class="my-5 mx-auto">
+        <h1 class="text-center mb-4">Sign Up for Fabricator</h1>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content footer-1">
-                <ul>
-                    <li><span class="footer-title">Pages</span></li>
-                    <li><a href="#" class="footer-link">Home</a></li>
-                </ul>
-                <ul>
-                    <li><span class="footer-title">Versions</span></li>
-                    <li><a href="#" class="footer-link">Fabricator</a></li>
-                </ul>
-                <ul>
-                    <li><span class="footer-title">More Info</span></li>
-                    <li><a href="#" class="footer-link">info@slabware.com</a></li>
-                </ul>
-                <ul>
-                    <li><span class="footer-title">Help</span></li>
-                    <li><a href="#" class="footer-link">How it Works</a></li>
-                </ul>
-                <ul>
-                    <li><span class="footer-title">Social Media</span></li>
-                    <li><a href="#" class="footer-link">Instagram</a></li>
-                </ul>
+        <p class="paragraph">Please enter your details</p>
+        <input type="text" class="form-control mb-3" id="NameInput" name="Name" placeholder="*Name...">
+        <input type="email" class="form-control mb-3" id="EmailInput" name="Email" placeholder="*E-mail...">
+        <input type="tel" class="form-control mb-3" id="PhoneInput" name="Phone" placeholder="*Phone...">
+        <input type="text" class="form-control mb-3" id="CompanyInput" name="Company" placeholder="*Company...">
+        <input type="text" class="form-control mb-3" id="LoginInput" name="Login" placeholder="*Login...">
+        <input type="password" class="form-control mb-3" id="PasswordInput" name="Password" placeholder="*Password...">
+        <div class="row gx-0 mb-4">
+            <div class="col-sm-9 pe-1">
+                <input type="text" class="form-control" id="TempWebsiteInput" name="Name"
+                    placeholder="*Temporary Website...">
             </div>
+            <label for="TempWebsiteInput" class="col-sm-auto col-form-label">.slabware.com</label>
         </div>
-        <div class="footer-container footer-2">
-            <div class="footer-content">
-                <div class="footer-row">
-                    <span class="footer-title">Headquarter:</span>
-                    <a href="#" class="footer-link">Brazil</a>
+
+        <p class="paragraph">Select your plan</p>
+        <div class="row gx-0 mb-5 g-3">
+            <div class="card text-center col-sm-4 selected">
+                <div class="card-header py-1">
+                    Monthly
+                </div>
+                <div class="card-body px-1 pb-2">
+                    <h4 class="card-title mb-0">U$ 149</h4>
+                    <p class="card-subtitle mb-2">Per month</p>
+                </div>
+            </div>
+
+            <div class="card text-center col-sm-4">
+                <div class="card-header py-1">
+                    Semesterly
+                </div>
+                <div class="card-body px-1 pb-2">
+                    <h4 class="card-title mb-0">U$ 142</h4>
+                    <p class="card-subtitle mb-2">Per month</p>
+                    <p class="mb-0 card-text">Billed semesterly <strong>U$ 852</strong></p>
+                </div>
+            </div>
+
+            <div class="card text-center col-sm-4">
+                <div class="card-header py-1">
+                    Yearly
+                </div>
+                <div class="card-body px-1 pb-2">
+                    <h4 class="card-title mb-0">U$ 135</h4>
+                    <p class="card-subtitle mb-2">Per month</p>
+                    <p class="mb-0 card-text">Billed yearly <strong>U$ 1,620</strong></p>
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid text-center">
+            <button class="btn py-1" type="submit">BUY NOW</button>
+        </div>
+    </form>
+
+    <footer class="bg-white">
+        <div class="container-fluid footerRow">
+            <div class="container">
+                <div class="row pt-4 pb-5">
+                    <div class="col-lg-2">
+                        <h5>Pages</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5>Versions</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">Fabricator</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>More info</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">info@slabware.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5>Help</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">How it Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5>Social Media</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid border-top-0 footerRow">
+            <div class="container">
+                <div class="row py-5 justify-content-between">
+                    <div class="col-10">
+                        <h5>Headquarter</h5>
+                    </div>
+                    <div class="col-2">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">Brazil</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </footer>
-    <script type="text/javascript" src="src/js/scripts.js"></script>
+
 </body>
+
 </html>
